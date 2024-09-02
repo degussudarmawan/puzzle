@@ -26,6 +26,7 @@ function makeElementDraggable(el, index) {
 
 	function dragMouseDown(e) {
 		e.preventDefault();
+
 		// Get the mouse cursor position at startup
 		if (e.type === 'touchstart') {
 			mouseX = e.touches[0].clientX;
@@ -34,8 +35,11 @@ function makeElementDraggable(el, index) {
 			mouseX = e.clientX;
 			mouseY = e.clientY;
 		}
+		
 		document.onmouseup = closeDragElement;
+		document.ontouchend = closeDragElement; // For touch devices
 		document.onmousemove = elementDrag;
+		document.ontouchmove = elementDrag; // For touch devices
 	}
 
 	function playSound(clickSound) {
