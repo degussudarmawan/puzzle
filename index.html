@@ -1,104 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Puzzle</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @font-face{font-family: Conthrax; src: url('conthrax/conthrax-sb.otf'); } 
-    </style>
+	<title>Puzzle</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		@font-face {
+			font-family: Conthrax;
+			src: url('conthrax/conthrax-sb.otf');
+		}
+	</style>
 </head>
+
 <body>
-    <div class="sidenav" id="sidenavbar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#home">home</a>
-        <a href="#aboutme">about</a>
-        <a href="#fav">fav</a>
-        <a href="#music">music</a>
-        <a href="#pieces">pieces</a>
-        <a href="#puzzle">puzzle</a>
-        <div id='bratNav'>
-            <a href="#BRAT">BRAT</a>
-        </div>
-        <a href="#contact">contact</a>
-    </div>
-    <div id="main">
-        <span onclick="openNav()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </span>
-        <div class="grid-container">
-            <div class="grid-item" id="piece1">
-                <div class="box-shadow" id="home">
-                    <div class= "box">
-                        <div class="text-container">
-                            <h1> Me </h1>
-                            <p>
-                                Hi! This is Agus!
-                                Im studying CompSci, and this is gonna be first term as a second year 
-                                (Hope I survive this term &#x1F616).
-                                19 and thrivin (n still dont know myself)
-                            </p>
-                            <p>
-                                (U guys better see this in laptop)
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" id="piece2">
-                <div class="box3-shadow">
-                    <div class="box3" id="fav">
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" id="piece3">
-                <div class="box4-shadow">
-                    <div class="box4" id="music">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="grid-container">
-            <div class="grid-item" id="piece4">
-                <div class="box3-shadow">
-                    <div class="box3" id="pieces">
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" id="piece5">
-                <div class="box2-shadow">
-                    <div class="box2" id="aboutme">
-                        <h1> fun fact (?) </h1>
-                        <li> infp (if u guys care bout mbti)</li>
-                        <li> 10% spaced out, 90% overthinking</li>
-                        <li> Hardcore kpopfans (mys and bunnies)</li>
-                    </div>
-                </div>
-            </div>
-            <div class="grid-item" id="piece6">
-                <div class="box4" id="puzzle">
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="grid-container">
-            <div class="grid-item" id="piece7">
-                <div class="box2" id="BRAT">
-                    <h1> wait!! (?) </h1>
-                    <p> Isn't this colour kinda familiar?</p>
-                </div>
-            </div>
-            <div class="grid-item" id="piece8">
-                <div class="box-shadow" id="contact">
-                    <div class= "box">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-    </div>
+	<div class="sidenav" id="sidenavbar">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#home">home</a>
+		<a href="#aboutme">about</a>
+		<a href="#fav">fav</a>
+		<a href="#music">music</a>
+		<a href="#pieces">pieces</a>
+		<a href="#puzzle">puzzle</a>
+		<div id='bratNav'>
+			<a href="#BRAT">BRAT</a>
+		</div>
+		<a href="#contact">contact</a>
+	</div>
+	<div id="main">
+		<span onclick="openNav()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</span>
+		<div class="grid-container">
+			<div class="grid-item" id="piece1">
+				<div class="box-shadow" id="home">
+					<div class="box">
+						<div class="text-container">
+							<h1> Me </h1>
+							<p>
+								Hi! This is Agus!
+								Im studying CompSci, and this is gonna be first term as a second year
+								(Hope I survive this term &#x1F616).
+								19 and thrivin (n still dont know myself)
+							</p>
+							<p>
+								(U guys better see this in laptop)
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="grid-item" id="piece2">
+				<div class="box3-shadow">
+					<div class="box3" id="fav">
+					</div>
+				</div>
+			</div>
+			<div class="grid-item" id="piece3">
+				<div class="box4-shadow">
+					<div class="box4" id="music">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="grid-container">
+			<div class="grid-item" id="piece4">
+				<div class="box3-shadow">
+					<div class="box3" id="pieces">
+					</div>
+				</div>
+			</div>
+			<div class="grid-item" id="piece5">
+				<div class="box2-shadow">
+					<div class="box2" id="aboutme">
+						<h1> fun fact (?) </h1>
+						<li> infp (if u guys care bout mbti)</li>
+						<li> 10% spaced out, 90% overthinking</li>
+						<li> Hardcore kpopfans (mys and bunnies)</li>
+					</div>
+				</div>
+			</div>
+			<div class="grid-item" id="piece6">
+				<div class="box4" id="puzzle">
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="grid-container">
+			<div class="grid-item" id="piece7">
+				<div class="box2" id="BRAT">
+					<h1> wait!! (?) </h1>
+					<p> Isn't this colour kinda familiar?</p>
+				</div>
+			</div>
+			<div class="grid-item" id="piece8">
+				<div class="box-shadow" id="contact">
+					<div class="box">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
 </body>
 <script src="script.js"></script>
+
 </html>
