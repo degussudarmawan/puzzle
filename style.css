@@ -1,0 +1,227 @@
+body{
+	/* background-image: linear-gradient(blue, rgb(146, 204, 255), white); */
+	overflow-x: hidden;
+	margin: 0;     
+	background-color: blue;                     
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #1b13b7; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+	font-family: "Conthrax", sans-serif;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+	text-shadow: 2px 2px black;;
+}
+
+/* When you mouse over the navigation links, change their color */
+#bratNav a:hover {
+	color: #8ACE00;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover, .sidenav a:hover {
+  color: #ff9d00;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.bar1:hover, .bar2:hover, .bar3:hover {
+  background-color: #ff9d00;
+}
+
+.grid-container{
+	display: grid;
+	column-gap: 30px;
+	grid-template-columns: auto auto auto;
+	padding: 15px;
+	position: relative;
+}
+
+.grid-item {
+	padding: 20px;
+	font-size: 30px;
+}
+
+.box {
+	width:400px;
+	aspect-ratio:1;
+	z-index: 1;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+		radial-gradient(var(--r) at left 50% bottom var(--r),rgb(251, 255, 0) 95%,#0000),
+		radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%,#0000 95%,rgb(251, 255, 0)) 
+		top/100% calc(100% - var(--r)) no-repeat;
+}
+
+.box-shadow{
+	width:410px;
+	aspect-ratio:1;
+	z-index: -2;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+		radial-gradient(var(--r) at left 50% bottom var(--r),rgba(0, 0, 0, 0.61) 95%,#0000),
+		radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%,#0000 95%,rgba(0, 0, 0, 0.61)) 
+		top/100% calc(100% - var(--r)) no-repeat;
+}
+
+.box2 {
+	width:400px;
+	aspect-ratio:1;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+		radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)),#0000 95%,#8ACE00) 
+		right/calc(100% - var(--r)) 100% no-repeat, 
+		radial-gradient(var(--r) at top 50% left var(--r),#8ACE00 95%,#00ff1500);
+}
+
+.box2-shadow{
+	width:410px;
+	aspect-ratio:1;
+	z-index: -2;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+		radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)),#0000 95%, rgba(0, 0, 0, 0.61)) 
+		right/calc(100% - var(--r)) 100% no-repeat, 
+		radial-gradient(var(--r) at top 50% left var(--r), rgba(0, 0, 0, 0.61) 95%, #00ff1500);
+}
+
+.box3 {
+	width:400px;
+	aspect-ratio:1;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+		radial-gradient(calc(var(--r) + var(--g)) at 50% calc(0% - var(--g)),#00000000 95%,#ff0090) 
+		left/calc(100% - var(--r)) 100% no-repeat, 
+		radial-gradient(var(--r) at top 50% right var(--r),#ff0090 95%,#0000);
+}
+
+.box3-shadow {
+	width:400px;
+	aspect-ratio:1;
+	z-index: -2;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+		radial-gradient(calc(var(--r) + var(--g)) at 50% calc(0% - var(--g)),#00000000 95%, rgba(0, 0, 0, 0.61)) 
+		left/calc(100% - var(--r)) 100% no-repeat, 
+		radial-gradient(var(--r) at top 50% right var(--r),rgba(0, 0, 0, 0.61) 95%,#0000);
+}
+
+.box4 {
+	width:400px;
+	aspect-ratio:1;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+	radial-gradient(calc(var(--r) + var(--g)) at calc(0% - var(--g)) 50%,#0000 95%,#00ffff) 
+	bottom/100% calc(100% - var(--r)) no-repeat, 
+	radial-gradient(var(--r) at left 50% top var(--r),#00ffff 95%,#0000);
+}
+
+.box4-shadow {
+	width:400px;
+	aspect-ratio:1;
+	z-index: -2;
+	display:inline-block;
+	--g: 6px;   /* control the gap */
+	--r: 42px;  /* control the circular shapes */
+	background: 
+	radial-gradient(calc(var(--r) + var(--g)) at calc(0% - var(--g)) 50%,#0000 95%,rgba(0, 0, 0, 0.61)) 
+	bottom/100% calc(100% - var(--r)) no-repeat, 
+	radial-gradient(var(--r) at left 50% top var(--r),rgba(0, 0, 0, 0.61) 95%,#0000);
+}
+
+#piece1, #piece2, #piece3, #piece4, #piece5, #piece6, #piece7, #piece8 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	cursor: grab;
+}
+
+#BRAT h1{
+	font-family: arial;
+	position: sticky;
+	text-align: center;
+}
+
+.box p{
+	margin: 40px;
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 15px;
+	line-height: 125%;
+}
+
+.box2 p, li{
+	margin: 20px;
+	text-align: right;
+	font-family: arial;
+	font-size: 15px;
+	line-height: 100%;
+} 
+
+h1{
+	text-align: center;
+	font-size: 30px;
+	font-family: "Conthrax", sans-serif;
+	font-style: bold;
+}
