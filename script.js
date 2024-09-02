@@ -12,8 +12,11 @@ function closeNav() {
 // Function to make an element draggable
 function makeElementDraggable(el, index) {
 	let posX = 0, posY = 0, mouseX = 0, mouseY = 0;
-	el.onmousedown = function (e) {
 
+	el.onmousedown = dragAndPlaySound;
+	el.ontouchstart = dragAndPlaySound;
+
+	function dragAndPlaySound(e) {
 		if (index === 6) {	// play brat for piece that has brat color
 			const clickSound = new Audio('apple.mp3');
 			playSound(clickSound); // Play the sound on click
@@ -24,8 +27,13 @@ function makeElementDraggable(el, index) {
 	function dragMouseDown(e) {
 		e.preventDefault();
 		// Get the mouse cursor position at startup
-		mouseX = e.clientX;
-		mouseY = e.clientY;
+		if (e.type === 'touchstart') {
+			mouseX = e.touches[0].clientX;
+			mouseY = e.touches[0].clientY;
+		} else {
+			mouseX = e.clientX;
+			mouseY = e.clientY;
+		}
 		document.onmouseup = closeDragElement;
 		document.onmousemove = elementDrag;
 	}
@@ -38,10 +46,18 @@ function makeElementDraggable(el, index) {
 	function elementDrag(e) {
 		e.preventDefault();
 		// Calculate the new cursor position
-		posX = mouseX - e.clientX;
-		posY = mouseY - e.clientY;
-		mouseX = e.clientX;
-		mouseY = e.clientY;
+		if (e.type === 'touchmove') {
+			posX = mouseX - e.touches[0].clientX;
+			posY = mouseY - e.touches[0].clientY;
+			mouseX = e.touches[0].clientX;
+			mouseY = e.touches[0].clientY;
+		} else {
+			posX = mouseX - e.clientX;
+			posY = mouseY - e.clientY;
+			mouseX = e.clientX;
+			mouseY = e.clientY;
+		}
+
 		// Set the element's new position
 		el.style.top = (el.offsetTop - posY) + "px";
 		el.style.left = (el.offsetLeft - posX) + "px";
@@ -50,7 +66,9 @@ function makeElementDraggable(el, index) {
 	function closeDragElement() {
 		// Stop moving when the mouse button is released
 		document.onmouseup = null;
+		document.ontouchend = null; // For touch devices
 		document.onmousemove = null;
+		document.ontouchmove = null; // For touch devices
 	}
 }
 
