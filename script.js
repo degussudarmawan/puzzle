@@ -61,3 +61,24 @@ document.querySelectorAll('.grid-item').forEach((item, index) => {
 	item.style.left = `${index * 100}px`;
 	makeElementDraggable(item, index);
 });
+
+// Shuffle all the pieces
+function shuffleElements() {
+	const elements = document.querySelectorAll('.grid-item');
+	const container = document.querySelector('.grid-container');
+
+	elements.forEach(el => {
+		// Generate random positions within the container
+		const maxX = container.clientWidth - el.clientWidth;
+		const maxY = container.clientHeight - el.clientHeight;
+		const randomX = Math.floor(Math.random() * maxX);
+		const randomY = Math.floor(Math.random() * maxY);
+
+		// Set the new position
+		el.style.left = `${randomX}px`;
+		el.style.top = `${randomY + 300}px`;
+	});
+}
+
+const shuffleBtn = document.querySelector('.guess');
+shuffleBtn.addEventListener('click', shuffleElements);

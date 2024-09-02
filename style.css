@@ -150,6 +150,8 @@ body {
   background:
     radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
     radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500);
+
+  animation: colorChanging 2s infinite;
 }
 
 .box2-shadow {
@@ -220,6 +222,21 @@ body {
     radial-gradient(var(--r) at left 50% top var(--r), rgba(0, 0, 0, 0.61) 95%, #0000);
 }
 
+@keyframes colorChanging-box2 {  
+  0% { background:
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500); }
+  50% { background:
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500); }
+  51% { background:
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #ce00c4) right/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% left var(--r), #ce00c4 95%, #00ff1500); }
+  100% { background:
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #ce00c4) right/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% left var(--r), #ce00c4 95%, #00ff1500); }
+}
+
 #piece1,
 #piece2,
 #piece3,
@@ -236,7 +253,6 @@ body {
 
 #BRAT h1 {
   font-family: arial;
-  position: sticky;
   text-align: center;
 }
 
