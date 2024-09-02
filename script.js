@@ -6,7 +6,7 @@ function openNav() {
 
 function closeNav() {
 	document.getElementById("sidenavbar").style.width = "0";
-	document.getElementById("main").style.marginLeft= "0";
+	document.getElementById("main").style.marginLeft = "0";
 }
 
 // Function to make an element draggable
