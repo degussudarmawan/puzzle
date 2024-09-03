@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-	<title>Puzzle</title>
+	<title>puzzle</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 	<style>
 		@font-face {
@@ -15,15 +16,13 @@
 <body>
 	<div class="sidenav" id="sidenavbar">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<a href="#home">home</a>
-		<a href="#aboutme">about</a>
-		<a href="#fav">fav</a>
+		<a href="#home">me</a>
+		<a href="#aboutme">fun fact</a>
+		<a href="#fav">fav recently</a>
 		<a href="#music">music</a>
 		<a href="#pieces">pieces</a>
-		<a href="#puzzle">puzzle</a>
-		<div id='bratNav'>
-			<a href="#BRAT">BRAT</a>
-		</div>
+		<a href="#guide">note</a>
+		<a href="#song">top track</a>
 		<a href="#contact">contact</a>
 		<a href="#stop" class="guess">GUESS</a>
 	</div>
@@ -52,15 +51,22 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid-item" id="piece2">
-				<div class="box3-shadow">
-					<div class="box3" id="fav">
+			<div class="grid-item" id="piece5">
+				<div class="box2-shadow">
+					<div class="box2" id="fav">
+						<img src="img2.jpg" alt="Skip to Loafers">
 					</div>
 				</div>
 			</div>
-			<div class="grid-item" id="piece3">
+			<div class="grid-item" id="piece2">
 				<div class="box4-shadow">
-					<div class="box4" id="music">
+					<div class="box4" id="aboutme">
+						<div class="text-container">
+							<h1> (Not so) Fun Fact (^o^)</h1>
+							<li> infp (if u guys care bout mbti)</li>
+							<li> 10% spaced out, 90% overthinking</li>
+							<li> Hardcore kpopfans (mys and bunnies)</li>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -73,32 +79,55 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid-item" id="piece5">
-				<div class="box2-shadow">
-					<div class="box2" id="aboutme">
-						<h1> fun fact (?) </h1>
-						<li> infp (if u guys care bout mbti)</li>
-						<li> 10% spaced out, 90% overthinking</li>
-						<li> Hardcore kpopfans (mys and bunnies)</li>
+			<div class="grid-item" id="piece7">
+				<div class="box2" id="song">
+					<div class="track-container">
+						<!-- <audio id="myAudio" src="song.mp3"></audio> -->
+						<h1>Top Track</h1>
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1NaDK3atogQEn9glK5fYuy?utm_source=generator" width="80%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5xA5MggKc3aQxuOzNzPUWB?utm_source=generator" width="80%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+						<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5sA3i6SGkILMiZW6Fhx4wv?utm_source=generator" width="80%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+						<!-- <button id="playButton">Play/Pause</button> -->
 					</div>
 				</div>
 			</div>
-			<div class="grid-item" id="piece6">
-				<div class="box4" id="puzzle">
+			<div class="grid-item" id="piece3">
+				<div class="box3-shadow">
+					<div class="box3" id="music">
+					</div>
 				</div>
 			</div>
 		</div>
 		<br>
 		<div class="grid-container">
-			<div class="grid-item" id="piece7">
-				<div class="box2" id="BRAT">
-					<h1> wait!! (?) </h1>
-					<p> Isn't this colour kinda familiar?</p>
-				</div>
-			</div>
 			<div class="grid-item" id="piece8">
 				<div class="box-shadow" id="contact">
 					<div class="box">
+						<h1>Contact</h1>
+						<div class="linkspan">
+							<a href="https://www.linkedin.com/in/gede-agus-sudarmawan-955475221/" target="_blank">
+								<i class="fa fa-linkedin-square"></i>
+							</a>
+						</div>
+						<div class="linkspan">
+							<a href="https://www.instagram.com/degusfirstlaw" target="_blank">
+									<i class="fa fa-instagram"></i>
+							</a>
+						</div>
+						<div class="linkspan">
+							<a href="https://github.com/degussudarmawan" target="_blank">
+								<i class="fa fa-github"></i>
+							</a>
+						</div>					
+					</div>
+				</div>
+			</div>
+			<div class="grid-item" id="piece6">
+				<div class="box4" id="guide">
+					<div class="text-container">
+						<h1> NOTE (^.^)</h1>
+						<p> Welcome to my personal website</p>
+						<p> Feel free to rearrange the elements as u want</p>
 					</div>
 				</div>
 			</div>
@@ -107,5 +136,4 @@
 	</div>
 </body>
 <script src="script.js"></script>
-
 </html>
