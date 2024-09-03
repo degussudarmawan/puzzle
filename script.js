@@ -25,7 +25,7 @@ function makeElementDraggable(el, index) {
 	function playSound(clickSound) {
 		clickSound.currentTime = 0; // Rewind to the start
 		clickSound.play(); // Play the sound
-}
+	}
 
 	function dragMouseDown(e) {
 		e.preventDefault();
@@ -77,8 +77,8 @@ function makeElementDraggable(el, index) {
 // Make the element with id "piece" draggable
 document.querySelectorAll('.grid-item').forEach((item, index) => {
 	item.id = `piece${index + 1}`;
-	item.style.top = `${index * 150}px`; // Adjust initial positions as needed
-	item.style.left = `${index * 100}px`;
+	item.style.top = `${(index % 3) * 300}px`; // Adjust initial positions as needed
+	item.style.left = `${index * 150}px`;
 	makeElementDraggable(item, index);
 });
 
