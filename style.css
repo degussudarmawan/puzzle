@@ -1,31 +1,34 @@
+:root {
+  --primary-color: #FFC1CC; 
+  --secondary-color: #AEC6CF;
+  --accent-color: #E6E6FA; 
+  --accent-color2: #98FF98;
+  --accent-color3: #FFDAB9;
+  --accent-color4: #FFFFE0;
+  --neutral-light: #A9A9A9;
+  --neutral-white: #FFFFFF; 
+  /* --hover-color: #ff9d00; */
+}
+
 body {
   /* background-image: linear-gradient(blue, rgb(146, 204, 255), white); */
   overflow-x: hidden;
   margin: 0;
-  background-color: blue;
+  background-color: var(--primary-color);
 }
 
 /* The side navigation menu */
 .sidenav {
   height: 100%;
-  /* 100% Full-height */
   width: 0;
-  /* 0 width - change this with JavaScript */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Stay on top */
   top: 0;
-  /* Stay at the top */
   left: 0;
-  background-color: #1b13b7;
-  /* Black*/
+  background-color: var(--secondary-color);
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -34,26 +37,17 @@ body {
   text-decoration: none;
   font-size: 25px;
   font-family: "Conthrax", sans-serif;
-  color: #ffffff;
+  color: var(----accent-color);
   display: block;
   transition: 0.3s;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px white;
   ;
 }
 
-/* When you mouse over the navigation links, change their color */
-#bratNav a:hover {
-  color: #8ACE00;
-}
-
-.bar1:hover,
-.bar2:hover,
-.bar3:hover,
 .sidenav a:hover {
-  color: #ff9d00;
+  color: var(--accent-color2);
 }
 
-/* Position and style the close button (top right corner) */
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -95,7 +89,7 @@ body {
 .bar1:hover,
 .bar2:hover,
 .bar3:hover {
-  background-color: #ff9d00;
+  background-color: var(--accent-color2);
 }
 
 .grid-container {
@@ -121,22 +115,8 @@ body {
   --r: 42px;
   /* control the circular shapes */
   background:
-    radial-gradient(var(--r) at left 50% bottom var(--r), rgb(251, 255, 0) 95%, #0000),
-    radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, rgb(251, 255, 0)) top/100% calc(100% - var(--r)) no-repeat;
-}
-
-.box-shadow {
-  width: 410px;
-  aspect-ratio: 1;
-  z-index: -2;
-  display: inline-block;
-  --g: 6px;
-  /* control the gap */
-  --r: 42px;
-  /* control the circular shapes */
-  background:
-    radial-gradient(var(--r) at left 50% bottom var(--r), rgba(0, 0, 0, 0.61) 95%, #0000),
-    radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, rgba(0, 0, 0, 0.61)) top/100% calc(100% - var(--r)) no-repeat;
+    radial-gradient(var(--r) at left 50% bottom var(--r), var(--accent-color) 95%, #0000),
+    radial-gradient(calc(var(--r) + var(--g)) at calc(100% + var(--g)) 50%, #0000 95%, var(--accent-color)) top/100% calc(100% - var(--r)) no-repeat;
 }
 
 .box2 {
@@ -144,28 +124,25 @@ body {
   aspect-ratio: 1;
   display: inline-block;
   --g: 6px;
-  /* control the gap */
   --r: 42px;
-  /* control the circular shapes */
   background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500);
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, var(--accent-color2)) right/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% left var(--r), var(--accent-color2) 95%, #00ff1500);
 
-  animation: colorChanging 2s infinite;
+  /* animation: colorChanging-box2 2s infinite; */
 }
 
-.box2-shadow {
-  width: 410px;
-  aspect-ratio: 1;
-  z-index: -2;
-  display: inline-block;
+.box2 img {
+  width: 100%;
+  height: 100%;
   --g: 6px;
-  /* control the gap */
   --r: 42px;
-  /* control the circular shapes */
-  background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, rgba(0, 0, 0, 0.61)) right/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% left var(--r), rgba(0, 0, 0, 0.61) 95%, #00ff1500);
+  --m:
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #000) right/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% left var(--r), #000 95%, #0000);
+  object-fit: cover;
+  -webkit-mask: var(--m);
+  mask: var(--m);
 }
 
 .box3 {
@@ -173,26 +150,10 @@ body {
   aspect-ratio: 1;
   display: inline-block;
   --g: 6px;
-  /* control the gap */
   --r: 42px;
-  /* control the circular shapes */
   background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(0% - var(--g)), #00000000 95%, #ff0090) left/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% right var(--r), #ff0090 95%, #0000);
-}
-
-.box3-shadow {
-  width: 400px;
-  aspect-ratio: 1;
-  z-index: -2;
-  display: inline-block;
-  --g: 6px;
-  /* control the gap */
-  --r: 42px;
-  /* control the circular shapes */
-  background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(0% - var(--g)), #00000000 95%, rgba(0, 0, 0, 0.61)) left/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% right var(--r), rgba(0, 0, 0, 0.61) 95%, #0000);
+    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(0% - var(--g)), #00000000 95%, var(--accent-color3)) left/calc(100% - var(--r)) 100% no-repeat,
+    radial-gradient(var(--r) at top 50% right var(--r), var(--accent-color3) 95%, #0000);
 }
 
 .box4 {
@@ -200,41 +161,41 @@ body {
   aspect-ratio: 1;
   display: inline-block;
   --g: 6px;
-  /* control the gap */
   --r: 42px;
-  /* control the circular shapes */
   background:
-    radial-gradient(calc(var(--r) + var(--g)) at calc(0% - var(--g)) 50%, #0000 95%, #00ffff) bottom/100% calc(100% - var(--r)) no-repeat,
-    radial-gradient(var(--r) at left 50% top var(--r), #00ffff 95%, #0000);
+    radial-gradient(calc(var(--r) + var(--g)) at calc(0% - var(--g)) 50%, #0000 95%, var(--accent-color4)) bottom/100% calc(100% - var(--r)) no-repeat,
+    radial-gradient(var(--r) at left 50% top var(--r), var(--accent-color4) 95%, #0000);
 }
 
-.box4-shadow {
-  width: 400px;
-  aspect-ratio: 1;
-  z-index: -2;
-  display: inline-block;
-  --g: 6px;
-  /* control the gap */
-  --r: 42px;
-  /* control the circular shapes */
-  background:
-    radial-gradient(calc(var(--r) + var(--g)) at calc(0% - var(--g)) 50%, #0000 95%, rgba(0, 0, 0, 0.61)) bottom/100% calc(100% - var(--r)) no-repeat,
-    radial-gradient(var(--r) at left 50% top var(--r), rgba(0, 0, 0, 0.61) 95%, #0000);
+@keyframes colorChanging-box2 {
+  0% {
+    background:
+      radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
+      radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500);
+  }
+
+  50% {
+    background:
+      radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
+      radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500);
+  }
+
+  51% {
+    background:
+      radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #ce00c4) right/calc(100% - var(--r)) 100% no-repeat,
+      radial-gradient(var(--r) at top 50% left var(--r), #ce00c4 95%, #00ff1500);
+  }
+
+  100% {
+    background:
+      radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #ce00c4) right/calc(100% - var(--r)) 100% no-repeat,
+      radial-gradient(var(--r) at top 50% left var(--r), #ce00c4 95%, #00ff1500);
+  }
 }
 
-@keyframes colorChanging-box2 {  
-  0% { background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500); }
-  50% { background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #8ACE00) right/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% left var(--r), #8ACE00 95%, #00ff1500); }
-  51% { background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #ce00c4) right/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% left var(--r), #ce00c4 95%, #00ff1500); }
-  100% { background:
-    radial-gradient(calc(var(--r) + var(--g)) at 50% calc(100% + var(--g)), #0000 95%, #ce00c4) right/calc(100% - var(--r)) 100% no-repeat,
-    radial-gradient(var(--r) at top 50% left var(--r), #ce00c4 95%, #00ff1500); }
+.text-container {
+  padding: 50px;
+  text-align: center
 }
 
 #piece1,
@@ -251,31 +212,58 @@ body {
   cursor: grab;
 }
 
-#BRAT h1 {
-  font-family: arial;
+.text-container p, .text-container li {
+  margin: 30px;
   text-align: center;
-}
-
-.box p {
-  margin: 40px;
-  text-align: left;
   font-family: sans-serif;
   font-size: 15px;
-  line-height: 125%;
+  line-height: 100%;
 }
 
-.box2 p,
-li {
-  margin: 20px;
-  text-align: right;
-  font-family: arial;
-  font-size: 15px;
-  line-height: 100%;
+.track-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding-left: 40px;
+}
+
+.track-container iframe {
+  width: 70%; /* Adjust width to fit within the box */
+  height: 80px; /* Set a uniform height for all iframes */
+  border: none; /* Remove borders for a cleaner look */
 }
 
 h1 {
   text-align: center;
   font-size: 30px;
-  font-family: "Conthrax", sans-serif;
+  font-family: sans-serif;
   font-style: bold;
+}
+
+/* Center icons in their container */
+.linkspan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 70px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+/* Make icons larger and center them */
+.linkspan i.fa {
+  font-size: 70px;
+  color:var(--primary-color);
+}
+
+/* Remove text decoration and center icon containers */
+.linkspan a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }

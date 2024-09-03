@@ -17,12 +17,15 @@ function makeElementDraggable(el, index) {
 	el.ontouchstart = dragAndPlaySound;
 
 	function dragAndPlaySound(e) {
-		if (index === 6) {	// play brat for piece that has brat color
-			const clickSound = new Audio('apple.mp3');
-			playSound(clickSound); // Play the sound on click
-		}
+		const clickSound = new Audio(`${index + 1}.wav`);
+		playSound(clickSound); // Play the sound on click
 		dragMouseDown(e);
 	};
+
+	function playSound(clickSound) {
+		clickSound.currentTime = 0; // Rewind to the start
+		clickSound.play(); // Play the sound
+}
 
 	function dragMouseDown(e) {
 		e.preventDefault();
@@ -35,16 +38,11 @@ function makeElementDraggable(el, index) {
 			mouseX = e.clientX;
 			mouseY = e.clientY;
 		}
-		
+
 		document.onmouseup = closeDragElement;
 		document.ontouchend = closeDragElement; // For touch devices
 		document.onmousemove = elementDrag;
 		document.ontouchmove = elementDrag; // For touch devices
-	}
-
-	function playSound(clickSound) {
-		clickSound.currentTime = 0; // Rewind to the start
-		clickSound.play(); // Play the sound
 	}
 
 	function elementDrag(e) {
@@ -104,3 +102,21 @@ function shuffleElements() {
 
 const shuffleBtn = document.querySelector('.guess');
 shuffleBtn.addEventListener('click', shuffleElements);
+
+// Change the image 
+const images = [
+	'img1.jpg',  // Replace with actual image paths
+	'img2.jpg',
+	'img3.jpg'
+];
+
+let currentImageIndex = 0;
+
+function changeImage() {
+	const imgElement = document.querySelector('#fav img'); // Select the img element inside #fav
+	currentImageIndex = (currentImageIndex + 1) % images.length; // Cycle through images
+	imgElement.src = images[currentImageIndex];
+}
+
+// Change the image every 2 seconds (2000 milliseconds)
+setInterval(changeImage, 2000);
