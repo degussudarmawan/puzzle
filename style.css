@@ -6,12 +6,10 @@
   --accent-color3: #FFDAB9;
   --accent-color4: #FFFFE0;
   --neutral-light: #A9A9A9;
-  --neutral-white: #FFFFFF; 
-  /* --hover-color: #ff9d00; */
+  --neutral-white: #FFFFFF;
 }
 
 body {
-  /* background-image: linear-gradient(blue, rgb(146, 204, 255), white); */
   margin: 0;
   background-color: var(--primary-color);
   font-family: 'Nunito', sans-serif;
@@ -185,14 +183,18 @@ h1 {
 }
 
 .text-container p, .text-container li {
-  margin: 25px;
+  margin: 20px;
   text-align: center;
   font-size: 15px;
   line-height: 100%;
 }
 
-.box3 .text-container {
+.box3 .text-container{
   padding-right: 80px;
+}
+
+#project p{
+  font-size: 13px;
 }
 
 .track-container {
@@ -204,32 +206,29 @@ h1 {
 }
 
 .track-container iframe {
-  width: 70%; /* Adjust width to fit within the box */
-  height: 80px; /* Set a uniform height for all iframes */
-  border: none; /* Remove borders for a cleaner look */
+  width: 70%;
+  height: 80px;
+  border: none;
 }
 
-/* Center icons in their container */
 .linkspan {
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Align content to the left */
-  margin-left: 20px; /* Shift the entire block to the right */
-  margin-bottom: 15px; /* Add space between each link */
+  margin-left: 20px;
+  margin-bottom: 15px;
   padding: 10px;
   border-radius: 10px;
 }
 
 .linkspan i.fa {
-  font-size: 50px; /* Adjust icon size if needed */
+  font-size: 50px; 
   color: var(--primary-color);
-  margin-right: 15px; /* Space between icon and text */
+  margin-right: 15px;
 }
 
 .linkspan p {
-  font-size: 16px; /* Increase text size for better readability */
+  font-size: 16px;
   color: black;
-  margin: 0; /* Remove default margin */
+  margin: 0;
 }
 
 .linkspan a {
@@ -252,7 +251,6 @@ h1 {
 }
 
 .text-animation1 p, .text-animation2 p, .text-animation3 p, .text-animation4 p, .text-animation5 p {
-  font-family: sans-serif;
   padding-right: 175px;
   font-size: 40px;
   text-align: center;

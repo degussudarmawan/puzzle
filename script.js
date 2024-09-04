@@ -103,7 +103,7 @@ function shuffleElements() {
 const shuffleBtn = document.querySelector('.guess');
 shuffleBtn.addEventListener('click', shuffleElements);
 
-// Change the image 
+// Change the images every 2 seconds
 const images = [
 	'img1.jpg',  // Replace with actual image paths
 	'img2.jpg',
@@ -118,5 +118,4 @@ function changeImage() {
 	imgElement.src = images[currentImageIndex];
 }
 
-// Change the image every 2 seconds (2000 milliseconds)
 setInterval(changeImage, 2000);
